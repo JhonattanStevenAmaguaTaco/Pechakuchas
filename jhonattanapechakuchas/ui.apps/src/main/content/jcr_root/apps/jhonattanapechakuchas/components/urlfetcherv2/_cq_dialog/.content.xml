@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Fetch URL Form v2 Configuration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    
+    <content jcr:primaryType="nt:unstructured"
+             sling:resourceType="granite/ui/components/coral/foundation/container"
+             layout="fixedColumns">
+        <items jcr:primaryType="nt:unstructured">
+            <url jcr:primaryType="nt:unstructured"
+                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                 fieldLabel="URL v2"
+                 name="./url"/>
+        </items>
+    </content>
+</jcr:root>

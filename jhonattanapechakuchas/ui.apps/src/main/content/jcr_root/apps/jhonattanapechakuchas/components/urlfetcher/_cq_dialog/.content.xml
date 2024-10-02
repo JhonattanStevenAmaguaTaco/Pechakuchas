@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Fetch get URL Form Configuration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    
+    <content jcr:primaryType="nt:unstructured"
+             sling:resourceType="granite/ui/components/coral/foundation/container"
+             layout="fixedColumns">
+        <items jcr:primaryType="nt:unstructured">
+            
+            <!-- Campo de texto para la URL predeterminada -->
+            <defaultUrl jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Default URL"
+                        name="./defaultUrl"/>
+            
+            <!-- Campo de texto para el nombre del botón -->
+            <buttonLabel jcr:primaryType="nt:unstructured"
+                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                         fieldLabel="Button Label"
+                         name="./buttonLabel"/>
+        </items>
+    </content>
+</jcr:root>

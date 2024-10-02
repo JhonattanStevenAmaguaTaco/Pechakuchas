@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/jhonattanapechakuchas",
+        "create path (nt:unstructured) /content/dam/jhonattanapechakuchas/jcr:content",
+        "set properties on /content/dam/jhonattanapechakuchas/jcr:content\n  set cq:conf{String} to /conf/jhonattanapechakuchas\n  set jcr:title{String} to \"Jhonattan A Pechakuchas \"\nend"
+    ]
+}

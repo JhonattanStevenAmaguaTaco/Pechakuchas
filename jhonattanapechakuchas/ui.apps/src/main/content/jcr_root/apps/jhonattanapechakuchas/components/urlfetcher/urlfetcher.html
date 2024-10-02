@@ -1,0 +1,24 @@
+<h1>GET Method</h1>
+<div class ="cmp-url-fetcher">
+   <!-- Formulario con textfield para la URL -->
+    <form id="fetch-form" data-cmp-is="urlfetcher" action="${properties.defaultUrl @ context='uri'}" method="GET" enctype="application/x-www-form-urlencoded">
+        
+        <!-- Campo de texto para ingresar la URL -->
+        <div class="form-group">
+            <label for="url-input">Enter URL:</label>
+            <input type="text" id="url-input" name="url" placeholder="Enter URL" class="cmp-url-fetcher__input" data-cmp-hook-dynamicform="name" value="${properties.defaultUrl}" required>
+        </div>
+
+        <!-- Text area para mostrar los resultados del GET -->
+        <div class="form-group">
+            <label for="textarea-result">Response:</label>
+            <textarea id="textarea-result" name="response" class="cmp-url-fetcher__textarea" rows="10" cols="50" readonly></textarea>
+        </div>
+
+        <!-- Botón para enviar la solicitud GET -->
+        <div class="form-group">
+            <button type="button" id="fetch-button" data-cmp-hook-dynamicform="submit">${properties.buttonLabel ? properties.buttonLabel : 'Send'}</button>
+        </div>
+    </form>
+</div>
+

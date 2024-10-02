@@ -1,0 +1,220 @@
+/*== Base Colors */
+:root {
+    --color-primary: #4867a6; /* Azul principal */
+    --color-secondary: #6290db; /* Azul claro */
+    --color-accent: #accce4; /* Azul muy claro */
+    --color-dark: #2e3552; /* Azul oscuro */
+    --color-highlight: #0a6e85; /* Azul verdoso */
+    
+    --font-size: 16px;
+    --font-family: 'Arial', sans-serif;
+    --line-height: 1.5;
+
+    --color-foreground: #2e3552; /* Texto principal */
+    --color-foreground-light: #6290db; /* Texto de párrafos */
+    --color-heading: #4867a6; /* Color de los títulos */
+    --color-paragraph: #0a6e85; /* Texto de los párrafos */
+    --color-background: #f4f4f9; /* Fondo más claro para mejor contraste */
+
+    --color-foreground-dark: #accce4; /* Texto oscuro */
+    --color-background-dark: #2e3552; /* Fondo oscuro */
+    --color-link: #4867a6; /* Link principal */
+    --color-link-dark: #6290db; /* Link oscuro */
+
+    --border-radius: 10px; /* Borde redondeado general */
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    --transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Global styles */
+html, body {
+    margin: 0;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    line-height: var(--line-height);
+    color: var(--color-foreground);
+    background: var(--color-background);
+    transition: var(--transition);
+
+    @media (prefers-color-scheme: dark) {
+        color: var(--color-foreground-dark);
+        background: var(--color-background-dark);
+    }
+}
+
+/* Formulario */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-heading);
+    margin-bottom: 5px;
+}
+
+input,input[type=text],
+textarea {
+    width: 96%;
+    border: 1px solid var(--color-dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    font-size: 14px;
+    color: var(--color-dark);
+    background-color: #f9f9f9;
+
+    &:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 8px rgba(72, 103, 166, 0.5);
+    }
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+
+    &:hover {
+        background-color: var(--color-highlight);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+}
+
+/* Tabs Container */
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-secondary);
+}
+
+/* Estilo general para los tabs */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid var(--color-dark);
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/* Cada tab individual */
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    background-color: var(--color-secondary);
+    color: white;
+    font-size: 16px;
+    transition: var(--transition);
+    border-right: 1px solid var(--color-dark);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+
+    &:last-child {
+        border-right: none; /* El último tab no tiene borde derecho */
+    }
+
+    /* Estado de hover en los tabs */
+    &:hover {
+        background-color: var(--color-primary);
+        color: white;
+    }
+
+    /* Estado activo (tab seleccionado) */
+    &.active {
+        background-color: var(--color-primary);
+        color: white;
+        border-bottom: 3px solid var(--color-highlight); /* Resalta el tab activo */
+    }
+}
+
+/* Contenido de cada tab */
+.tab-content {
+    padding: 20px;
+    background-color: var(--color-background);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    box-shadow: var(--box-shadow);
+    color: var(--color-foreground);
+    transition: var(--transition);
+}
+
+/* Mejoras en accesibilidad: foco en los tabs */
+.tab:focus {
+    outline: 3px solid var(--color-highlight); /* Enfoca el tab cuando está seleccionado */
+    outline-offset: 3px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        border-right: none;
+        border-bottom: 1px solid var(--color-dark);
+        border-radius: var(--border-radius);
+    }
+
+    .tab:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--color-background-dark);
+        color: var(--color-foreground-dark);
+    }
+
+    a {
+        color: var(--color-link-dark);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--color-foreground-dark);
+    }
+
+    p {
+        color: var(--color-foreground-light);
+    }
+
+    form {
+        background-color: var(--color-background-dark);
+    }
+
+    .tabs {
+        background-color: var(--color-background-dark);
+    }
+}

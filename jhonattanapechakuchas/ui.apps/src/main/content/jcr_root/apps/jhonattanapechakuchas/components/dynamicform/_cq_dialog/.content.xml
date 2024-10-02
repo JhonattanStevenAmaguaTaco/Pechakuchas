@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Dynamic Form Configuration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    
+    <content jcr:primaryType="nt:unstructured"
+             sling:resourceType="granite/ui/components/coral/foundation/container"
+             layout="fixedColumns">
+        <!-- Configuración del formulario -->
+        <items jcr:primaryType="nt:unstructured">
+            <!-- Campo para la URL de acción del formulario -->
+            <actionUrl jcr:primaryType="nt:unstructured"
+                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                       fieldLabel="Form Action URL"
+                       name="./actionUrl"/>
+
+            <!-- Selector para el método del formulario (POST, PUT, DELETE) -->
+            <formMethod jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Form Method"
+                        name="./formMethod">
+                <items jcr:primaryType="nt:unstructured">
+                    <optionGET jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select/option"
+                                value="GET"
+                                text="GET"/>
+                    <optionPOST jcr:primaryType="nt:unstructured"
+                    
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select/option"
+                                value="POST"
+                                text="POST"/>
+                    <optionPUT jcr:primaryType="nt:unstructured"
+                               sling:resourceType="granite/ui/components/coral/foundation/form/select/option"
+                               value="PUT"
+                               text="PUT"/>
+                    <optionDELETE jcr:primaryType="nt:unstructured"
+                                  sling:resourceType="granite/ui/components/coral/foundation/form/select/option"
+                                  value="DELETE"
+                                  text="DELETE"/>
+                </items>
+            </formMethod>
+
+            <!-- Campos para Name, City, Phone -->
+            <textFieldLabelName jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Name Label"
+                                name="./textFieldLabelName"/>
+                                
+            <textFieldName jcr:primaryType="nt:unstructured"
+                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                           fieldLabel="Name Default Value"
+                           name="./textFieldName"/>
+
+            <textFieldLabelCity jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="City Label"
+                                name="./textFieldLabelCity"/>
+                                
+            <textFieldCity jcr:primaryType="nt:unstructured"
+                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                           fieldLabel="City Default Value"
+                           name="./textFieldCity"/>
+
+            <textFieldLabelPhone jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Phone Label"
+                                name="./textFieldLabelPhone"/>
+                                
+            <textFieldPhone jcr:primaryType="nt:unstructured"
+                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                           fieldLabel="Phone Default Value"
+                           name="./textFieldPhone"/>
+
+            <!-- Botón de envío -->
+            <submitButtonLabel jcr:primaryType="nt:unstructured"
+                               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                               fieldLabel="Submit Button Label"
+                               name="./submitButtonLabel"/>
+        </items>
+    </content>
+</jcr:root>

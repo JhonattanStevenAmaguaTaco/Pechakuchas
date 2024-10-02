@@ -1,0 +1,7 @@
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Component"
+    jcr:title="URL form fetcher Component v2"
+    componentGroup="Formulario"
+    sling:resourceSuperType="" />

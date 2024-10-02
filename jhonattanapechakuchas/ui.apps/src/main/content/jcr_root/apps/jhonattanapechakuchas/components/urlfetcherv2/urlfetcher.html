@@ -1,0 +1,22 @@
+<h1>GET Method</h1>
+<div class="cmp-url-fetcher-v2">
+    <!-- Formulario con textfield para la URL -->
+    <form id="fetch-form-v2" data-cmp-is="urlfetcher-v2">
+        <!-- Campo de texto para ingresar la URL -->
+        <div class="form-group">
+            <label for="url-input-v2">Enter URL:</label>
+            <input type="text" id="url-input-v2" name="url" placeholder="Enter URL" value="${properties.url}" required>
+        </div>
+
+        <!-- Text area para mostrar los resultados del GET -->
+        <div class="form-group">
+            <label for="textarea-result-v2">Response:</label>
+            <textarea id="textarea-result-v2" name="response" rows="10" cols="50" readonly>${model.response}</textarea>
+        </div>
+
+        <!-- Botón para enviar la solicitud GET -->
+        <div class="form-group">
+            <button type="button" id="fetch-button-v2">Fetch Data</button>
+        </div>
+    </form>
+</div>

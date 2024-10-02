@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/jhonattanapechakuchas" mode="merge"/>
+    <filter root="/content/jhonattanapechakuchas" mode="merge"/>
+    <filter root="/content/dam/jhonattanapechakuchas" mode="merge">
+        <exclude pattern="/content/dam/jhonattanapechakuchas(/.*)?"/>
+        <include pattern="/content/dam/jhonattanapechakuchas/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/jhonattanapechakuchas/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/jhonattanapechakuchas" mode="merge"/>
+</workspaceFilter>

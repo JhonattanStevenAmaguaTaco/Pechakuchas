@@ -1,0 +1,26 @@
+<h1>${properties.formMethod} Method</h1>
+<form data-cmp-is="dynamicform" action="${properties.actionUrl @ context='uri'}" method="${properties.formMethod}" enctype="application/x-www-form-urlencoded">
+   
+    <!-- Campo de texto para Name -->
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" data-cmp-hook-dynamicform="name" value="${properties.textFieldName}" />
+    </div>
+
+    <!-- Campo de texto para City -->
+    <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" data-cmp-hook-dynamicform="city" value="${properties.textFieldCity}" />
+    </div>
+
+    <!-- Campo de texto para Phone -->
+    <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" data-cmp-hook-dynamicform="phone" value="${properties.textFieldPhone}" />
+    </div>
+
+    <!-- Botón de envío -->
+    <div class="form-group">
+        <button type="button" data-cmp-hook-dynamicform="submit">Send</button>
+    </div>
+</form>
